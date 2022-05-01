@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="CapsuleMesh" id=9]
+
+[sub_resource type="SpatialMaterial" id=10]
+albedo_color = Color( 0, 0.796078, 1, 1 )
+
+[node name="Item" type="MeshInstance" groups=["Detectable"]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.2766 )
+mesh = SubResource( 9 )
+material/0 = SubResource( 10 )
