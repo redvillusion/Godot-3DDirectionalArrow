@@ -34,7 +34,7 @@ albedo_texture = ExtResource( 3 )
 
 [node name="World" type="Spatial"]
 script = ExtResource( 4 )
-camera_select = "orthagonal"
+camera_select = "player"
 
 [node name="HUD" type="Control" parent="."]
 margin_right = 40.0
