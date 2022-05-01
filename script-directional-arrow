@@ -1,0 +1,13 @@
+Sometimes, you might want to indicate the direction a player needs to go in order to get an item, see an enemy, or achieve a goal. And what better way to do that than have an arrow point in that direction? So I've made an arrow here that points at this cylinder mesh (our enemy) no matter where the player node is, or what direction the player is facing. I've included a character controller to move our player node. If you want an explanation as to how this works, please see Garbaj (prints on screen) since I believe I stole this code from one of his videos.
+
+Before we can successfully rotate the arrow, we need to change its rotation point. The rotation point is the axis on which the arrow will rotate. Looking at the script, this block of code rotates the arrow depending on the relative direction the player is to the enemy mesh AND the direction the player is facing. So the player will always know the direction in which the mesh is located. This works with multiple enemies as per this block of code that gets the nearest node from the group Detectable.
+
+Additionally, the arrow color indicates how close the enemy is to our player. The deeper the red, the closer the enemy. But, you might also want your arrow to point at other things like resources, items, goals, etc. If I instance some scenes under the resources and items spatials, the arrow will also point to them since they belong to the "Detectable" group. This code block controls the arrow's color by checking the parent of the scene. 
+
+Additionally, make sure the Display / Window is set to either 2d or Viewport so that resizing doesn't move the arrow around.
+
+And this even works in orthographic view. I've created another arrow that hovers over our body node that marks the origin of the camera pivot node. This arrow is using roughly the same code as our previous arrow, with some tweaking to the paths and the offset. We even have a zoom in / zoom out feature that adjusts the arrow's scale relative to the camera size.
+
+You can download this project from Github by using the link in the description.
+
+Thanks for watching, if you have any questions or suggested improvements, please leave them in the comments. Have a wonderful day.
